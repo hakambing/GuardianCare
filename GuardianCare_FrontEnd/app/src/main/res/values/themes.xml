@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Light theme (default) -->
+    <style name="Theme.GuardianCare" parent="android:Theme.Material.Light.NoActionBar">
+        <!-- System bar colors -->
+        <item name="android:statusBarColor">@android:color/white</item>
+        <item name="android:navigationBarColor">@android:color/white</item>
+        
+        <!-- Light bars (dark icons) -->
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        
+        <!-- Force apply light mode to prevent system UI from using dark mode incorrectly -->
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        
+        <!-- Use a system edge-to-edge layout -->
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
+    </style>
+</resources>

@@ -1,0 +1,83 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: notification-service
+  namespace: guardiancare
+  labels:
+    app: notification-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: notification-service
+  template:
+    metadata:
+      labels:
+        app: notification-service
+    spec:
+      containers:
+      - name: notification-service
+        image: notification-service:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 3002
+          name: http
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "300m"
+            memory: "256Mi"
+        env:
+        - name: NODE_ENV
+          value: "development"
+        - name: PORT
+          valueFrom:
+            configMapKeyRef:
+              name: guardiancare-config
+              key: NOTIFICATION_SERVICE_PORT
+        - name: MONGODB_URI
+          valueFrom:
+            secretKeyRef:
+              name: guardiancare-secrets
+              key: MONGODB_URI
+        - name: MQTT_BROKER_URL
+          value: "mqtt://test.mosquitto.org:1883"
+        - name: MQTT_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: guardiancare-secrets
+              key: MQTT_USERNAME
+        - name: MQTT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: guardiancare-secrets
+              key: MQTT_PASSWORD
+        - name: FIREBASE_PROJECT_ID
+          valueFrom:
+            secretKeyRef:
+              name: guardiancare-secrets
+              key: FIREBASE_PROJECT_ID
+        - name: FIREBASE_CLIENT_EMAIL
+          valueFrom:
+            secretKeyRef:
+              name: guardiancare-secrets
+              key: FIREBASE_CLIENT_EMAIL
+        - name: FIREBASE_PRIVATE_KEY
+          valueFrom:
+            secretKeyRef:
+              name: guardiancare-secrets
+              key: FIREBASE_PRIVATE_KEY
+        - name: JWT_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: guardiancare-secrets
+              key: JWT_SECRET
+        - name: FCM_TEST_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: guardiancare-secrets
+              key: FCM_TEST_TOKEN
+        # Readiness and liveness probes removed as health endpoint doesn't exist
+        # To add them back, implement a health endpoint at /api/notifications/health

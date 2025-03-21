@@ -1,0 +1,69 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: llm-service
+  namespace: guardiancare
+  labels:
+    app: llm-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: llm-service
+  template:
+    metadata:
+      labels:
+        app: llm-service
+    spec:
+      containers:
+      - name: llm-service
+        image: llm-service:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 6002
+          name: http
+        resources:
+          requests:
+            cpu: "500m"
+            memory: "512Mi"
+          limits:
+            cpu: "1000m"
+            memory: "2Gi"
+        env:
+        - name: LLAMA_ARG_HOST
+          value: "0.0.0.0"
+        - name: MODEL_PATH
+          valueFrom:
+            secretKeyRef:
+              name: guardiancare-secrets
+              key: LLM_MODEL_PATH
+        volumeMounts:
+        - name: llm-model-volume
+          mountPath: /models
+        command: ["/bin/sh", "-c"]
+        args:
+        - >
+          /app/server/server -m $(MODEL_PATH) -c $(CONTEXT_SIZE) --port $(LLM_SERVICE_PORT)
+        env:
+        - name: CONTEXT_SIZE
+          valueFrom:
+            configMapKeyRef:
+              name: guardiancare-config
+              key: CONTEXT_SIZE
+        - name: LLM_SERVICE_PORT
+          valueFrom:
+            configMapKeyRef:
+              name: guardiancare-config
+              key: LLM_SERVICE_PORT
+        # Readiness and liveness probes removed as health endpoint doesn't exist
+        # To add them back, implement a health endpoint at /health
+      volumes:
+      - name: llm-model-volume
+        emptyDir: {}
+      initContainers:
+      - name: model-downloader
+        image: busybox
+        command: ['sh', '-c', 'echo "In a production environment, this would download or copy the LLM model files to the shared volume"']
+        volumeMounts:
+        - name: llm-model-volume
+          mountPath: /models

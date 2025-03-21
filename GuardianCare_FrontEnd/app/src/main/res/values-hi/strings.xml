@@ -1,0 +1,233 @@
+<resources>
+    <!-- App Name -->
+    <string name="app_name">GuardianCare</string>
+    
+    <!-- Navigation Drawer -->
+    <string name="home">होम</string>
+    <string name="profile">प्रोफाइल</string>
+    <string name="elderly">बुजुर्ग</string>
+    <string name="fall_notifications">गिरावट सूचनाएं</string>
+    <string name="help">सहायता</string>
+    <string name="check_in">चेक-इन</string>
+    <string name="guardian_care">गार्डियन केयर</string>
+    <string name="elderly_dashboard">बुजुर्ग डैशबोर्ड</string>
+    <string name="caretaker_dashboard">देखभालकर्ता डैशबोर्ड</string>
+
+    <!-- General -->
+    <string name="settings">सेटिंग्स</string>
+    <string name="cancel">रद्द करें</string>
+    <string name="apply">लागू करें</string>
+    <string name="save">सहेजें</string>
+    <string name="edit">संपादित करें</string>
+    <string name="try_again">पुनः प्रयास करें</string>
+    <string name="error">त्रुटि</string>
+    <string name="logout">लॉगआउट</string>
+    <string name="logout_confirmation">क्या आप वाकई लॉगआउट करना चाहते हैं?</string>
+
+    <!-- Settings Categories -->
+    <string name="account">खाता</string>
+    <string name="app_settings">ऐप सेटिंग्स</string>
+    <string name="support_about">सहायता और परिचय</string>
+
+    <!-- Account Settings -->
+    <string name="personal_information">व्यक्तिगत जानकारी</string>
+    <string name="update_personal_details">अपनी व्यक्तिगत जानकारी अपडेट करें</string>
+    <string name="security">सुरक्षा</string>
+    <string name="change_password">पासवर्ड और सुरक्षा विकल्प बदलें</string>
+    <string name="health_information">स्वास्थ्य जानकारी</string>
+    <string name="update_medical_details">अपनी चिकित्सा जानकारी और आपातकालीन संपर्क अपडेट करें</string>
+    <string name="professional_profile">पेशेवर प्रोफाइल</string>
+    <string name="update_professional_details">अपनी पेशेवर जानकारी अपडेट करें</string>
+    <string name="patient_management">मरीज प्रबंधन</string>
+    <string name="manage_patients">अपने मरीजों और पहुंच अनुरोधों का प्रबंधन करें</string>
+
+    <!-- App Settings -->
+    <string name="notifications">सूचनाएं</string>
+    <string name="receive_alerts">मरीज गतिविधि के लिए अलर्ट प्राप्त करें</string>
+    <string name="dark_mode">डार्क मोड</string>
+    <string name="language">भाषा</string>
+    <string name="select_language">भाषा चुनें</string>
+    <string name="changing_language">भाषा बदल रहे हैं: %1$s - ऐप पुनरारंभ होगा</string>
+    <string name="applying_language">%1$s लागू कर रहे हैं…</string>
+    <string name="applying_dark_mode">डार्क मोड में स्विच कर रहे हैं</string>
+    <string name="applying_light_mode">लाइट मोड में स्विच कर रहे हैं</string>
+    <string name="location_sharing">स्थान साझाकरण</string>
+    <string name="allow_location_sharing">देखभालकर्ताओं को अपना स्थान देखने की अनुमति दें</string>
+    <string name="fall_detection">गिरावट की पहचान</string>
+    <string name="fall_detection_description">गिरावट का पता लगने पर स्वचालित रूप से देखभालकर्ताओं को सूचित करें</string>
+    <string name="alert_settings">अलर्ट सेटिंग्स</string>
+    <string name="configure_alerts">कॉन्फ़िगर करें कि आप कब अलर्ट प्राप्त करें</string>
+
+    <!-- Support & About -->
+    <string name="help_support">सहायता और समर्थन</string>
+    <string name="get_help">ऐप का उपयोग करने में सहायता प्राप्त करें</string>
+    <string name="about">परिचय</string>
+    <string name="app_version">ऐप वर्शन %1$s</string>
+    <string name="data_usage">डेटा उपयोग</string>
+    <string name="used_data">इस महीने %1$s का उपयोग किया</string>
+    
+    <!-- Home Screen -->
+    <string name="welcome_home">स्वागत गृह</string>
+    <string name="your_status">आपकी स्थिति</string>
+    <string name="medication">दवा</string>
+    <string name="heart_rate">हृदय गति</string>
+    <string name="steps">कदम</string>
+    <string name="sleep">नींद</string>
+    <string name="test_fall_detection">गिरावट पहचान परीक्षण</string>
+    <string name="patients_overview">रोगियों का अवलोकन</string>
+    <string name="alerts">अलर्ट</string>
+    <string name="health_reports">स्वास्थ्य रिपोर्ट</string>
+    <string name="total">कुल</string>
+    <string name="online">ऑनलाइन</string>
+    
+    <!-- Bluetooth Connection -->
+    <string name="connected_to_guardiancare">गार्डियनकेयर से जुड़ा हुआ</string>
+    <string name="scanning_for_guardiancare">गार्डियनकेयर के लिए स्कैन कर रहा है...</string>
+    <string name="connect_to_guardiancare">गार्डियनकेयर से कनेक्ट करें</string>
+    <string name="tap_to_configure_wifi">वाई-फाई कॉन्फ़िगर करने के लिए टैप करें</string>
+    <string name="tap_to_stop_scanning">स्कैनिंग रोकने के लिए टैप करें</string>
+    <string name="tap_to_start_scanning">स्कैन शुरू करने के लिए टैप करें</string>
+    <string name="device_connected_successfully">✅ गार्डियनकेयर डिवाइस सफलतापूर्वक जुड़ा</string>
+    <string name="ensure_device_powered_on">सुनिश्चित करें कि आपका गार्डियनकेयर डिवाइस चालू है और पास है</string>
+    <string name="scanning_stopped">स्कैनिंग रुक गई</string>
+    
+    <!-- WiFi Configuration -->
+    <string name="configure_wifi_connection">वाई-फाई कनेक्शन कॉन्फ़िगर करें</string>
+    <string name="wifi_name_ssid">वाई-फाई नाम (SSID)</string>
+    <string name="wifi_password">वाई-फाई पासवर्ड</string>
+    <string name="your_account_email_will_be_used">डिवाइस पहचान के लिए आपका खाता ईमेल उपयोग किया जाएगा</string>
+    <string name="connect">कनेक्ट करें</string>
+    <string name="wifi_config_sent_successfully">वाई-फाई कॉन्फ़िगरेशन सफलतापूर्वक भेजा गया</string>
+    <string name="failed_to_send_wifi_config">वाई-फाई कॉन्फ़िगरेशन भेजने में विफल</string>
+    <string name="could_not_retrieve_email">उपयोगकर्ता ईमेल प्राप्त नहीं कर सका। कृपया पुनः प्रयास करें।</string>
+    <string name="remove_device">डिवाइस हटाएं</string>
+    <string name="device_removed_successfully">डिवाइस सफलतापूर्वक हटा दिया गया</string>
+    <string name="failed_to_remove_device">डिवाइस हटाने में विफल</string>
+    
+    <!-- Permissions -->
+    <string name="bluetooth_permissions_required">ब्लूटूथ अनुमतियां आवश्यक हैं</string>
+    <string name="bluetooth_permissions_explanation">गार्डियनकेयर डिवाइस से कनेक्ट करने के लिए ब्लूटूथ और स्थान अनुमतियां आवश्यक हैं। कृपया ऐप सेटिंग्स में इन अनुमतियों को प्रदान करें।</string>
+    <string name="open_settings">सेटिंग्स खोलें</string>
+    
+    <!-- Profile Screen -->
+    <string name="profile_updated_successfully">प्रोफ़ाइल सफलतापूर्वक अपडेट की गई</string>
+    <string name="profile_picture">प्रोफाइल चित्र</string>
+    <string name="account_information">खाता जानकारी</string>
+    <string name="created_at">बनाया गया</string>
+    <string name="last_updated">अंतिम अपडेट</string>
+    <string name="edit_profile">प्रोफाइल संपादित करें</string>
+    <string name="test_fcm_notification">FCM सूचना परीक्षण करें</string>
+    <string name="fcm_notification_help">यह सुनिश्चित करने के लिए इस बटन का उपयोग करें कि FCM सूचनाएं सही ढंग से काम कर रही हैं</string>
+    <string name="email">ईमेल</string>
+    <string name="date_of_birth">जन्म तिथि</string>
+    <string name="date_of_birth_format">जन्म तिथि (MM/DD/YYYY)</string>
+    <string name="user_id">उपयोगकर्ता आईडी</string>
+    <string name="caretaker_id">देखभालकर्ता आईडी</string>
+    <string name="medical_history">चिकित्सा इतिहास</string>
+    <string name="condition">स्थिति</string>
+    <string name="add_condition">स्थिति जोड़ें</string>
+    <string name="remove">हटाएं</string>
+    <string name="medical_conditions">चिकित्सा स्थितियां</string>
+    <string name="name">नाम</string>
+    
+    <!-- Check-In Screen -->
+    <string name="daily_check_in">दैनिक चेक-इन</string>
+    <string name="how_are_you_feeling_today">आज आप कैसा महसूस कर रहे हैं?</string>
+    <string name="rate_your_wellbeing">अपनी समग्र भलाई का मूल्यांकन करें:</string>
+    <string name="additional_notes">अतिरिक्त नोट्स (वैकल्पिक):</string>
+    <string name="notes_placeholder">यहां कोई चिंता या नोट दर्ज करें...</string>
+    <string name="submit_check_in">चेक-इन सबमिट करें</string>
+    <string name="check_in_submitted">चेक-इन सबमिट किया गया!</string>
+    <string name="check_in_success_message">आपके दैनिक अपडेट के लिए धन्यवाद। आपके देखभालकर्ताओं को सूचित कर दिया गया है।</string>
+    <string name="new_check_in">नया चेक-इन</string>
+    <string name="poor">खराब</string>
+    <string name="excellent">उत्कृष्ट</string>
+    <string name="great">बहुत अच्छा</string>
+    <string name="good">अच्छा</string>
+    <string name="okay">ठीक</string>
+    <string name="not_well">अच्छा नहीं</string>
+    
+    <!-- Fall Detection Screen -->
+    <string name="checking_bluetooth_connection">ब्लूटूथ कनेक्शन की जांच कर रहा है...</string>
+    <string name="connected_to_m5stickc">M5StickC-Plus से जुड़ा हुआ</string>
+    <string name="scanning_for_bluetooth_device">ब्लूटूथ डिवाइस के लिए स्कैन कर रहा है...</string>
+    <string name="disconnected_from_m5stickc">M5StickC-Plus से डिस्कनेक्ट हुआ</string>
+    <string name="restart_bluetooth_scan">ब्लूटूथ स्कैन पुनरारंभ करें</string>
+    
+    <!-- Elderly Management Screen -->
+    <string name="elderly_management">बुजुर्ग प्रबंधन</string>
+    <string name="search_patients">मरीज खोजें...</string>
+    <string name="your_patients">आपके मरीज</string>
+    <string name="no_patients_found">कोई मरीज नहीं मिला</string>
+    <string name="add_new_patient">नया मरीज जोड़ें</string>
+    
+    <!-- Login Screen -->
+    <string name="login">लॉगिन</string>
+    <string name="app_logo">ऐप लोगो</string>
+    <string name="server_settings">सर्वर सेटिंग्स</string>
+    <string name="sign_in_to_account">अपने खाते में साइन इन करें</string>
+    <string name="email_icon">ईमेल आइकन</string>
+    <string name="password">पासवर्ड</string>
+    <string name="password_icon">पासवर्ड आइकन</string>
+    <string name="hide_password">पासवर्ड छिपाएं</string>
+    <string name="show_password">पासवर्ड दिखाएं</string>
+    <string name="all_fields_required">सभी फ़ील्ड आवश्यक हैं</string>
+    <string name="or_sign_in_with">या इसके साथ साइन इन करें</string>
+    <string name="google">गूगल</string>
+    <string name="facebook">फेसबुक</string>
+    <string name="apple">एप्पल</string>
+    <string name="dont_have_account">खाता नहीं है? </string>
+    <string name="register">रजिस्टर करें</string>
+    <string name="server">सर्वर: %1$s</string>
+    <string name="server_url">सर्वर URL</string>
+    <string name="enter_ngrok_url">अपने बैकएंड सर्वर के लिए ngrok URL दर्ज करें:</string>
+    <string name="server_url_example">उदाहरण: https://a1b2c3d4e5f6.ngrok.io</string>
+    <string name="server_url_note">नोट: प्रोटोकॉल (http:// या https://) और अंत में स्लैश शामिल करना सुनिश्चित करें</string>
+    <string name="server_url_updated">सर्वर URL अपडेट हो गया: %1$s</string>
+    <string name="login_with">%1$s लॉगिन</string>
+    
+    <!-- Chatbot Screen -->
+    <string name="chatbot">चैटबॉट</string>
+    
+    <!-- Help Screen -->
+    <string name="user_guide">उपयोगकर्ता गाइड</string>
+    <string name="emergency_contacts">आपातकालीन संपर्क</string>
+    <string name="support">समर्थन</string>
+    <string name="help_and_support">सहायता और समर्थन</string>
+    <!-- Caretaker Guide -->
+    <string name="caretaker_guide_title_1">मरीज प्रोफाइल सेटअप</string>
+    <string name="caretaker_guide_desc_1">मरीज प्रोफाइल कैसे जोड़ें और प्रबंधित करें, चिकित्सा जानकारी अपडेट करें, और आपातकालीन संपर्क सेट करें।</string>
+    <string name="caretaker_guide_title_2">गिरावट पहचान अलर्ट</string>
+    <string name="caretaker_guide_desc_2">समझें कि गिरावट पहचान प्रणाली कैसे काम करती है और अलर्ट का तुरंत जवाब कैसे दें।</string>
+    <string name="caretaker_guide_title_3">स्वास्थ्य निगरानी</string>
+    <string name="caretaker_guide_desc_3">मरीज के महत्वपूर्ण संकेतों, दवा अनुपालन और दैनिक चेक-इन का अनुसरण करें।</string>
+    <!-- Elderly Guide -->
+    <string name="elderly_guide_title_1">दैनिक चेक-इन</string>
+    <string name="elderly_guide_desc_1">अपने दैनिक चेक-इन को पूरा करना सीखें ताकि आपके देखभालकर्ताओं को आपकी भलाई के बारे में अपडेट रहे।</string>
+    <string name="elderly_guide_title_2">गिरावट पहचान सेटअप</string>
+    <string name="elderly_guide_desc_2">स्वचालित गिरावट पहचान और आपातकालीन अलर्ट के लिए अपना डिवाइस कॉन्फ़िगर करें।</string>
+    <string name="elderly_guide_title_3">दवा रिमाइंडर</string>
+    <string name="elderly_guide_desc_3">अपने स्वास्थ्य नियम के साथ अद्यतित रहने के लिए दवा रिमाइंडर सेटअप और प्रबंधित करें।</string>
+    <!-- Emergency Contacts -->
+    <string name="emergency_contact_police">सिंगापुर पुलिस फोर्स</string>
+    <string name="emergency_number_police">999</string>
+    <string name="emergency_service_police">पुलिस, सुरक्षा</string>
+    <string name="emergency_contact_ambulance">सिंगापुर सिविल डिफेंस फोर्स</string>
+    <string name="emergency_number_ambulance">995</string>
+    <string name="emergency_service_ambulance">एम्बुलेंस, चिकित्सा</string>
+    <string name="emergency_contact_intro">आपातकाल की स्थिति में, कृपया संपर्क करें:</string>
+    <string name="emergency_call">आपातकालीन कॉल</string>
+    <!-- Support -->
+    <string name="need_help">मदद चाहिए?</string>
+    <string name="support_description">हम आपके किसी भी मुद्दे या प्रश्न के साथ आपका समर्थन करने के लिए यहाँ हैं।</string>
+    <string name="contact_support">समर्थन से संपर्क करें</string>
+    <string name="contact_support_description">हमारी समर्थन टीम को ईमेल या कॉल करें</string>
+    
+    <!-- Fall Notification Screen -->
+    <string name="no_fall_notifications">कोई गिरावट सूचनाएं नहीं</string>
+    <string name="check_for_notifications">नई सूचनाएं देखने के लिए रिफ्रेश बटन का उपयोग करें</string>
+    <string name="refresh">रिफ्रेश</string>
+    
+    <!-- Caretaker Screen -->
+    <string name="caretaker">देखभालकर्ता</string>
+</resources>

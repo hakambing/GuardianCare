@@ -1,0 +1,257 @@
+<resources>
+    <!-- App Name -->
+    <string name="app_name">GuardianCare</string>
+    
+    <!-- Navigation Drawer -->
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="elderly">Elderly</string>
+    <string name="fall_notifications">Fall Notifications</string>
+    <string name="help">Help</string>
+    <string name="check_in">Check-In</string>
+    <string name="guardian_care">Guardian Care</string>
+    <string name="elderly_dashboard">Elderly Dashboard</string>
+    <string name="caretaker_dashboard">Caretaker Dashboard</string>
+
+    <!-- General -->
+    <string name="settings">Settings</string>
+    <string name="cancel">Cancel</string>
+    <string name="apply">Apply</string>
+    <string name="save">Save</string>
+    <string name="edit">Edit</string>
+    <string name="try_again">Try Again</string>
+    <string name="error">Error</string>
+    <string name="logout">Logout</string>
+    <string name="logout_confirmation">Are you sure you want to log out?</string>
+    <string name="coming_soon">Coming Soon</string>
+
+    <!-- Settings Categories -->
+    <string name="account">Account</string>
+    <string name="app_settings">App Settings</string>
+    <string name="support_about">Support &amp; About</string>
+
+    <!-- Account Settings -->
+    <string name="personal_information">Personal Information</string>
+    <string name="update_personal_details">Update your personal details</string>
+    <string name="security">Security</string>
+    <string name="change_password">Change password and security options</string>
+    <string name="health_information">Health Information</string>
+    <string name="update_medical_details">Update your medical details and emergency contacts</string>
+    <string name="professional_profile">Professional Profile</string>
+    <string name="update_professional_details">Update your professional details</string>
+    <string name="patient_management">Patient Management</string>
+    <string name="manage_patients">Manage your patients and access requests</string>
+
+    <!-- App Settings -->
+    <string name="notifications">Notifications</string>
+    <string name="receive_alerts">Receive alerts for patient activity</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="language">Language</string>
+    <string name="select_language">Select Language</string>
+    <string name="changing_language">Changing language to: %1$s - App will restart</string>
+    <string name="applying_language">Applying %1$s…</string>
+    <string name="applying_dark_mode">Switching to dark mode</string>
+    <string name="applying_light_mode">Switching to light mode</string>
+    <string name="location_sharing">Location Sharing</string>
+    <string name="allow_location_sharing">Allow caregivers to see your location</string>
+    <string name="fall_detection">Fall Detection</string>
+    <string name="fall_detection_description">Automatically notify caregivers if a fall is detected</string>
+    <string name="alert_settings">Alert Settings</string>
+    <string name="configure_alerts">Configure when you receive alerts</string>
+
+    <!-- Support & About -->
+    <string name="help_support">Help &amp; Support</string>
+    <string name="get_help">Get help using the app</string>
+    <string name="about">About</string>
+    <string name="app_version">App version %1$s</string>
+    <string name="data_usage">Data Usage</string>
+    <string name="used_data">Used %1$s this month</string>
+    
+    <!-- Home Screen -->
+    <string name="welcome_home">Welcome Home</string>
+    <string name="your_status">Your Status</string>
+    <string name="medication">Medication</string>
+    <string name="heart_rate">Heart Rate</string>
+    <string name="steps">Steps</string>
+    <string name="sleep">Sleep</string>
+    <string name="test_fall_detection">Test Fall Detection</string>
+    <string name="patients_overview">Patients Overview</string>
+    <string name="alerts">Alerts</string>
+    <string name="health_reports">Health Reports</string>
+    <string name="total">Total</string>
+    <string name="online">Online</string>
+    
+    <!-- Caretaker Home Screen -->
+    <string name="latest_alert">Latest Check-In</string>
+    <string name="view_all">View All</string>
+    <string name="no_alerts">No alerts at this time</string>
+    <string name="fall_detected">Fall detected</string>
+    <string name="needs_attention">Needs Attention</string>
+    <string name="no_patients_assigned">No patients assigned</string>
+    <string name="manage_elderly">MANAGE ELDERLY</string>
+    <string name="assigned">Assigned</string>
+    <string name="active">Active</string>
+    <string name="error_loading_alerts">Error loading alerts: %1$s</string>
+    <string name="error_loading_patients">Error loading patients: %1$s</string>
+    <string name="priority_urgent">URGENT</string>
+    <string name="priority_high">HIGH</string>
+    <string name="priority_medium">MEDIUM</string>
+    <string name="priority_low">LOW</string>
+    <string name="priority_normal">NORMAL</string>
+    <string name="view_profile">View Profile</string>
+    <string name="hello_user">Hello, %1$s</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="configure">Configure</string>
+    <string name="scanning">Scanning</string>
+    
+    <!-- Bluetooth Connection -->
+    <string name="connected_to_guardiancare">Connected to GuardianCare Smartwatch</string>
+    <string name="scanning_for_guardiancare">Scanning for Smartwatch...</string>
+    <string name="connect_to_guardiancare">Connect to GuardianCare Smartwatch</string>
+    <string name="tap_to_configure_wifi">Tap to configure WiFi</string>
+    <string name="tap_to_stop_scanning">Tap to stop scanning</string>
+    <string name="tap_to_start_scanning">Tap to start scanning</string>
+    <string name="device_connected_successfully">✅ GuardianCare device connected successfully</string>
+    <string name="ensure_device_powered_on">Make sure your GuardianCare device is powered on and nearby</string>
+    <string name="scanning_stopped">Scanning stopped</string>
+    
+    <!-- WiFi Configuration -->
+    <string name="configure_wifi_connection">Configure WiFi Connection</string>
+    <string name="wifi_name_ssid">WiFi Name (SSID)</string>
+    <string name="wifi_password">WiFi Password</string>
+    <string name="your_account_email_will_be_used">Your account email will be used for device identification</string>
+    <string name="connect">Connect</string>
+    <string name="wifi_config_sent_successfully">WiFi configuration sent successfully</string>
+    <string name="failed_to_send_wifi_config">Failed to send WiFi configuration</string>
+    <string name="could_not_retrieve_email">Could not retrieve user email. Please try again.</string>
+    <string name="remove_device">Remove Device</string>
+    <string name="device_removed_successfully">Device removed successfully</string>
+    <string name="failed_to_remove_device">Failed to remove device</string>
+    
+    <!-- Permissions -->
+    <string name="bluetooth_permissions_required">Bluetooth Permissions Required</string>
+    <string name="bluetooth_permissions_explanation">Bluetooth and location permissions are required to connect to the GuardianCare device. Please grant these permissions in the app settings.</string>
+    <string name="open_settings">Open Settings</string>
+    
+    <!-- Profile Screen -->
+    <string name="profile_updated_successfully">Profile updated successfully</string>
+    <string name="profile_picture">Profile Picture</string>
+    <string name="account_information">Account Information</string>
+    <string name="created_at">Created At</string>
+    <string name="last_updated">Last Updated</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="test_fcm_notification">Test FCM Notification</string>
+    <string name="fcm_notification_help">Use this button to test if FCM notifications are working properly</string>
+    <string name="email">Email</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="date_of_birth_format">Date of Birth (MM/DD/YYYY)</string>
+    <string name="user_id">User ID</string>
+    <string name="caretaker_id">Caretaker ID</string>
+    <string name="medical_history">Medical History</string>
+    <string name="condition">Condition</string>
+    <string name="add_condition">Add condition</string>
+    <string name="remove">Remove</string>
+    <string name="medical_conditions">Medical Conditions</string>
+    <string name="name">Name</string>
+    
+    <!-- Check-In Screen -->
+    <string name="daily_check_in">Daily Check-In</string>
+    <string name="how_are_you_feeling_today">How are you feeling today?</string>
+    <string name="rate_your_wellbeing">Rate your overall wellbeing:</string>
+    <string name="additional_notes">Additional notes (optional):</string>
+    <string name="notes_placeholder">Enter any concerns or notes here...</string>
+    <string name="submit_check_in">Submit Check-In</string>
+    <string name="check_in_submitted">Check-In Submitted!</string>
+    <string name="check_in_success_message">Thank you for your daily update. Your caretakers have been notified.</string>
+    <string name="new_check_in">New Check-In</string>
+    <string name="poor">Poor</string>
+    <string name="excellent">Excellent</string>
+    <string name="great">Great</string>
+    <string name="good">Good</string>
+    <string name="okay">Okay</string>
+    <string name="not_well">Not Well</string>
+    
+    <!-- Fall Detection Screen -->
+    <string name="checking_bluetooth_connection">Checking Bluetooth Connection...</string>
+    <string name="connected_to_m5stickc">Connected to M5StickC-Plus</string>
+    <string name="scanning_for_bluetooth_device">Scanning for Bluetooth Device...</string>
+    <string name="disconnected_from_m5stickc">Disconnected from M5StickC-Plus</string>
+    <string name="restart_bluetooth_scan">Restart Bluetooth Scan</string>
+    
+    <!-- Elderly Management Screen -->
+    <string name="elderly_management">Elderly Management</string>
+    <string name="search_patients">Search patients...</string>
+    <string name="your_patients">Your Patients</string>
+    <string name="no_patients_found">No patients found</string>
+    <string name="add_new_patient">Add New Elderly</string>
+    
+    <!-- Login Screen -->
+    <string name="login">Login</string>
+    <string name="app_logo">App Logo</string>
+    <string name="server_settings">Server Settings</string>
+    <string name="sign_in_to_account">Sign in to your account</string>
+    <string name="email_icon">Email Icon</string>
+    <string name="password">Password</string>
+    <string name="password_icon">Password Icon</string>
+    <string name="hide_password">Hide Password</string>
+    <string name="show_password">Show Password</string>
+    <string name="all_fields_required">All fields are required</string>
+    <string name="or_sign_in_with">Or sign in with</string>
+    <string name="google">Google</string>
+    <string name="facebook">Facebook</string>
+    <string name="apple">Apple</string>
+    <string name="dont_have_account">Don\'t have an account? </string>
+    <string name="register">Register</string>
+    <string name="server">Server: %1$s</string>
+    <string name="server_url">Server URL</string>
+    <string name="enter_ngrok_url">Enter the ngrok URL for your backend server:</string>
+    <string name="server_url_example">Example: https://a1b2c3d4e5f6.ngrok.io</string>
+    <string name="server_url_note">Note: Make sure to include the protocol (http:// or https://) and trailing slash</string>
+    <string name="server_url_updated">Server URL updated to: %1$s</string>
+    <string name="login_with">%1$s login</string>
+    
+    <!-- Chatbot Screen -->
+    <string name="chatbot">Chatbot</string>
+    
+    <!-- Help Screen -->
+    <string name="user_guide">User Guide</string>
+    <string name="emergency_contacts">Emergency Contacts</string>
+    <string name="support">Support</string>
+    <string name="help_and_support">Help &amp; Support</string>
+    <!-- Caretaker Guide -->
+    <string name="caretaker_guide_title_1">Setting Up Patient Profiles</string>
+    <string name="caretaker_guide_desc_1">Learn how to add and manage patient profiles, update medical information, and set emergency contacts.</string>
+    <string name="caretaker_guide_title_2">Fall Detection Alerts</string>
+    <string name="caretaker_guide_desc_2">Understand how the fall detection system works and how to respond to alerts quickly.</string>
+    <string name="caretaker_guide_title_3">Health Monitoring</string>
+    <string name="caretaker_guide_desc_3">Track patient vital signs, medication adherence, and daily check-ins.</string>
+    <!-- Elderly Guide -->
+    <string name="elderly_guide_title_1">Daily Check-Ins</string>
+    <string name="elderly_guide_desc_1">Learn how to complete your daily check-ins to keep your caretakers updated about your wellbeing.</string>
+    <string name="elderly_guide_title_2">Setting Up Fall Detection</string>
+    <string name="elderly_guide_desc_2">Configure your device for automatic fall detection and emergency alerts.</string>
+    <string name="elderly_guide_title_3">Medication Reminders</string>
+    <string name="elderly_guide_desc_3">Set up and manage medication reminders to stay on track with your health regimen.</string>
+    <!-- Emergency Contacts -->
+    <string name="emergency_contact_police">Singapore Police Force</string>
+    <string name="emergency_number_police">999</string>
+    <string name="emergency_service_police">Police, Security</string>
+    <string name="emergency_contact_ambulance">Singapore Civil Defence Force</string>
+    <string name="emergency_number_ambulance">995</string>
+    <string name="emergency_service_ambulance">Ambulance, Medical</string>
+    <string name="emergency_contact_intro">In case of emergency, please contact:</string>
+    <string name="emergency_call">Emergency Call</string>
+    <!-- Support -->
+    <string name="need_help">Need Help?</string>
+    <string name="support_description">We\'re here to support you with any issues or questions you might have.</string>
+    <string name="contact_support">Contact Support</string>
+    <string name="contact_support_description">Email or call our support team</string>
+    
+    <!-- Fall Notification Screen -->
+    <string name="no_fall_notifications">No fall notifications</string>
+    <string name="check_for_notifications">Use the refresh button to check for new notifications</string>
+    <string name="refresh">Refresh</string>
+    
+    <!-- Caretaker Screen -->
+    <string name="caretaker">Caretaker</string>
+</resources>

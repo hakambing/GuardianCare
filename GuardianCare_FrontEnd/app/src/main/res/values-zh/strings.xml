@@ -1,0 +1,233 @@
+<resources>
+    <!-- App Name -->
+    <string name="app_name">GuardianCare</string>
+    
+    <!-- Navigation Drawer -->
+    <string name="home">首页</string>
+    <string name="profile">个人资料</string>
+    <string name="elderly">老人</string>
+    <string name="fall_notifications">跌倒通知</string>
+    <string name="help">帮助</string>
+    <string name="check_in">签到</string>
+    <string name="guardian_care">护理卫士</string>
+    <string name="elderly_dashboard">老人面板</string>
+    <string name="caretaker_dashboard">看护人面板</string>
+
+    <!-- General -->
+    <string name="settings">设置</string>
+    <string name="cancel">取消</string>
+    <string name="apply">应用</string>
+    <string name="save">保存</string>
+    <string name="edit">编辑</string>
+    <string name="try_again">重试</string>
+    <string name="error">错误</string>
+    <string name="logout">退出登录</string>
+    <string name="logout_confirmation">您确定要退出登录吗？</string>
+
+    <!-- Settings Categories -->
+    <string name="account">账户</string>
+    <string name="app_settings">应用设置</string>
+    <string name="support_about">支持与关于</string>
+
+    <!-- Account Settings -->
+    <string name="personal_information">个人信息</string>
+    <string name="update_personal_details">更新您的个人资料</string>
+    <string name="security">安全</string>
+    <string name="change_password">更改密码和安全选项</string>
+    <string name="health_information">健康信息</string>
+    <string name="update_medical_details">更新您的医疗信息和紧急联系人</string>
+    <string name="professional_profile">专业档案</string>
+    <string name="update_professional_details">更新您的专业信息</string>
+    <string name="patient_management">患者管理</string>
+    <string name="manage_patients">管理您的患者和访问请求</string>
+
+    <!-- App Settings -->
+    <string name="notifications">通知</string>
+    <string name="receive_alerts">接收患者活动提醒</string>
+    <string name="dark_mode">深色模式</string>
+    <string name="language">语言</string>
+    <string name="select_language">选择语言</string>
+    <string name="changing_language">正在更改语言为: %1$s - 应用即将重启</string>
+    <string name="applying_language">正在应用 %1$s…</string>
+    <string name="applying_dark_mode">切换至深色模式</string>
+    <string name="applying_light_mode">切换至浅色模式</string>
+    <string name="location_sharing">位置共享</string>
+    <string name="allow_location_sharing">允许看护人查看您的位置</string>
+    <string name="fall_detection">跌倒检测</string>
+    <string name="fall_detection_description">检测到跌倒时自动通知看护人</string>
+    <string name="alert_settings">提醒设置</string>
+    <string name="configure_alerts">配置您何时接收提醒</string>
+
+    <!-- Support & About -->
+    <string name="help_support">帮助与支持</string>
+    <string name="get_help">获取应用使用帮助</string>
+    <string name="about">关于</string>
+    <string name="app_version">应用版本 %1$s</string>
+    <string name="data_usage">数据用量</string>
+    <string name="used_data">本月已使用 %1$s</string>
+    
+    <!-- Home Screen -->
+    <string name="welcome_home">欢迎回家</string>
+    <string name="your_status">您的状态</string>
+    <string name="medication">药物</string>
+    <string name="heart_rate">心率</string>
+    <string name="steps">步数</string>
+    <string name="sleep">睡眠</string>
+    <string name="test_fall_detection">测试跌倒检测</string>
+    <string name="patients_overview">患者概览</string>
+    <string name="alerts">提醒</string>
+    <string name="health_reports">健康报告</string>
+    <string name="total">总计</string>
+    <string name="online">在线</string>
+    
+    <!-- Bluetooth Connection -->
+    <string name="connected_to_guardiancare">已连接到护理卫士</string>
+    <string name="scanning_for_guardiancare">正在扫描护理卫士...</string>
+    <string name="connect_to_guardiancare">连接到护理卫士</string>
+    <string name="tap_to_configure_wifi">点击配置WiFi</string>
+    <string name="tap_to_stop_scanning">点击停止扫描</string>
+    <string name="tap_to_start_scanning">点击开始扫描</string>
+    <string name="device_connected_successfully">✅ 护理卫士设备已成功连接</string>
+    <string name="ensure_device_powered_on">确保您的护理卫士设备已开机并在附近</string>
+    <string name="scanning_stopped">扫描已停止</string>
+    
+    <!-- WiFi Configuration -->
+    <string name="configure_wifi_connection">配置WiFi连接</string>
+    <string name="wifi_name_ssid">WiFi名称 (SSID)</string>
+    <string name="wifi_password">WiFi密码</string>
+    <string name="your_account_email_will_be_used">您的账户邮箱将用于设备识别</string>
+    <string name="connect">连接</string>
+    <string name="wifi_config_sent_successfully">WiFi配置已成功发送</string>
+    <string name="failed_to_send_wifi_config">发送WiFi配置失败</string>
+    <string name="could_not_retrieve_email">无法获取用户邮箱。请重试。</string>
+    <string name="remove_device">移除设备</string>
+    <string name="device_removed_successfully">设备已成功移除</string>
+    <string name="failed_to_remove_device">移除设备失败</string>
+    
+    <!-- Permissions -->
+    <string name="bluetooth_permissions_required">需要蓝牙权限</string>
+    <string name="bluetooth_permissions_explanation">连接到护理卫士设备需要蓝牙和位置权限。请在应用设置中授予这些权限。</string>
+    <string name="open_settings">打开设置</string>
+    
+    <!-- Profile Screen -->
+    <string name="profile_updated_successfully">个人资料已成功更新</string>
+    <string name="profile_picture">头像</string>
+    <string name="account_information">账户信息</string>
+    <string name="created_at">创建于</string>
+    <string name="last_updated">最近更新</string>
+    <string name="edit_profile">编辑个人资料</string>
+    <string name="test_fcm_notification">测试FCM通知</string>
+    <string name="fcm_notification_help">使用此按钮测试FCM通知是否正常工作</string>
+    <string name="email">邮箱</string>
+    <string name="date_of_birth">出生日期</string>
+    <string name="date_of_birth_format">出生日期 (MM/DD/YYYY)</string>
+    <string name="user_id">用户ID</string>
+    <string name="caretaker_id">看护人ID</string>
+    <string name="medical_history">病史</string>
+    <string name="condition">健康状况</string>
+    <string name="add_condition">添加健康状况</string>
+    <string name="remove">移除</string>
+    <string name="medical_conditions">健康状况</string>
+    <string name="name">姓名</string>
+    
+    <!-- Check-In Screen -->
+    <string name="daily_check_in">每日签到</string>
+    <string name="how_are_you_feeling_today">今天感觉如何？</string>
+    <string name="rate_your_wellbeing">评价您的整体健康状况：</string>
+    <string name="additional_notes">附加备注（可选）：</string>
+    <string name="notes_placeholder">在此输入任何担忧或备注...</string>
+    <string name="submit_check_in">提交签到</string>
+    <string name="check_in_submitted">签到已提交！</string>
+    <string name="check_in_success_message">感谢您的每日更新。您的看护人已收到通知。</string>
+    <string name="new_check_in">新签到</string>
+    <string name="poor">很差</string>
+    <string name="excellent">极好</string>
+    <string name="great">很好</string>
+    <string name="good">好</string>
+    <string name="okay">一般</string>
+    <string name="not_well">不太好</string>
+    
+    <!-- Fall Detection Screen -->
+    <string name="checking_bluetooth_connection">正在检查蓝牙连接...</string>
+    <string name="connected_to_m5stickc">已连接到M5StickC-Plus</string>
+    <string name="scanning_for_bluetooth_device">正在扫描蓝牙设备...</string>
+    <string name="disconnected_from_m5stickc">已从M5StickC-Plus断开连接</string>
+    <string name="restart_bluetooth_scan">重新开始蓝牙扫描</string>
+    
+    <!-- Elderly Management Screen -->
+    <string name="elderly_management">老人管理</string>
+    <string name="search_patients">搜索患者...</string>
+    <string name="your_patients">您的患者</string>
+    <string name="no_patients_found">未找到患者</string>
+    <string name="add_new_patient">添加新患者</string>
+    
+    <!-- Login Screen -->
+    <string name="login">登录</string>
+    <string name="app_logo">应用标志</string>
+    <string name="server_settings">服务器设置</string>
+    <string name="sign_in_to_account">登录您的账户</string>
+    <string name="email_icon">邮箱图标</string>
+    <string name="password">密码</string>
+    <string name="password_icon">密码图标</string>
+    <string name="hide_password">隐藏密码</string>
+    <string name="show_password">显示密码</string>
+    <string name="all_fields_required">所有字段都必须填写</string>
+    <string name="or_sign_in_with">或使用以下方式登录</string>
+    <string name="google">谷歌</string>
+    <string name="facebook">脸书</string>
+    <string name="apple">苹果</string>
+    <string name="dont_have_account">没有账户？</string>
+    <string name="register">注册</string>
+    <string name="server">服务器: %1$s</string>
+    <string name="server_url">服务器URL</string>
+    <string name="enter_ngrok_url">输入您后端服务器的ngrok URL:</string>
+    <string name="server_url_example">示例: https://a1b2c3d4e5f6.ngrok.io</string>
+    <string name="server_url_note">注意: 确保包含协议(http://或https://)和尾部斜杠</string>
+    <string name="server_url_updated">服务器URL已更新为: %1$s</string>
+    <string name="login_with">%1$s登录</string>
+    
+    <!-- Chatbot Screen -->
+    <string name="chatbot">聊天机器人</string>
+    
+    <!-- Help Screen -->
+    <string name="user_guide">用户指南</string>
+    <string name="emergency_contacts">紧急联系人</string>
+    <string name="support">支持</string>
+    <string name="help_and_support">帮助与支持</string>
+    <!-- Caretaker Guide -->
+    <string name="caretaker_guide_title_1">设置患者档案</string>
+    <string name="caretaker_guide_desc_1">学习如何添加和管理患者档案，更新医疗信息，以及设置紧急联系人。</string>
+    <string name="caretaker_guide_title_2">跌倒检测提醒</string>
+    <string name="caretaker_guide_desc_2">了解跌倒检测系统如何工作以及如何快速响应提醒。</string>
+    <string name="caretaker_guide_title_3">健康监测</string>
+    <string name="caretaker_guide_desc_3">跟踪患者生命体征，药物依从性和每日签到。</string>
+    <!-- Elderly Guide -->
+    <string name="elderly_guide_title_1">每日签到</string>
+    <string name="elderly_guide_desc_1">学习如何完成您的每日签到，让您的看护人了解您的健康状况。</string>
+    <string name="elderly_guide_title_2">设置跌倒检测</string>
+    <string name="elderly_guide_desc_2">配置您的设备以自动检测跌倒和发送紧急提醒。</string>
+    <string name="elderly_guide_title_3">药物提醒</string>
+    <string name="elderly_guide_desc_3">设置和管理药物提醒，保持您的健康护理计划。</string>
+    <!-- Emergency Contacts -->
+    <string name="emergency_contact_police">新加坡警察部队</string>
+    <string name="emergency_number_police">999</string>
+    <string name="emergency_service_police">警察，安全</string>
+    <string name="emergency_contact_ambulance">新加坡民防部队</string>
+    <string name="emergency_number_ambulance">995</string>
+    <string name="emergency_service_ambulance">救护车，医疗</string>
+    <string name="emergency_contact_intro">紧急情况下，请联系:</string>
+    <string name="emergency_call">紧急呼叫</string>
+    <!-- Support -->
+    <string name="need_help">需要帮助？</string>
+    <string name="support_description">我们随时为您解答任何问题或疑虑。</string>
+    <string name="contact_support">联系支持</string>
+    <string name="contact_support_description">给我们的支持团队发送邮件或打电话</string>
+    
+    <!-- Fall Notification Screen -->
+    <string name="no_fall_notifications">没有跌倒通知</string>
+    <string name="check_for_notifications">使用刷新按钮检查新通知</string>
+    <string name="refresh">刷新</string>
+    
+    <!-- Caretaker Screen -->
+    <string name="caretaker">看护人</string>
+</resources>

@@ -1,0 +1,233 @@
+<resources>
+    <!-- App Name -->
+    <string name="app_name">PenjagaWarga</string>
+    
+    <!-- Navigation Drawer -->
+    <string name="home">Laman Utama</string>
+    <string name="profile">Profil</string>
+    <string name="elderly">Warga Emas</string>
+    <string name="fall_notifications">Pemberitahuan Jatuh</string>
+    <string name="help">Bantuan</string>
+    <string name="check_in">Daftar Masuk</string>
+    <string name="guardian_care">Penjaga Warga</string>
+    <string name="elderly_dashboard">Papan Pemuka Warga Emas</string>
+    <string name="caretaker_dashboard">Papan Pemuka Penjaga</string>
+
+    <!-- General -->
+    <string name="settings">Tetapan</string>
+    <string name="cancel">Batal</string>
+    <string name="apply">Gunakan</string>
+    <string name="save">Simpan</string>
+    <string name="edit">Edit</string>
+    <string name="try_again">Cuba Lagi</string>
+    <string name="error">Ralat</string>
+    <string name="logout">Log Keluar</string>
+    <string name="logout_confirmation">Adakah anda pasti ingin log keluar?</string>
+
+    <!-- Settings Categories -->
+    <string name="account">Akaun</string>
+    <string name="app_settings">Tetapan Aplikasi</string>
+    <string name="support_about">Sokongan &amp; Tentang</string>
+
+    <!-- Account Settings -->
+    <string name="personal_information">Maklumat Peribadi</string>
+    <string name="update_personal_details">Kemaskini butiran peribadi anda</string>
+    <string name="security">Keselamatan</string>
+    <string name="change_password">Tukar kata laluan dan pilihan keselamatan</string>
+    <string name="health_information">Maklumat Kesihatan</string>
+    <string name="update_medical_details">Kemaskini maklumat perubatan dan kenalan kecemasan</string>
+    <string name="professional_profile">Profil Profesional</string>
+    <string name="update_professional_details">Kemaskini butiran profesional anda</string>
+    <string name="patient_management">Pengurusan Pesakit</string>
+    <string name="manage_patients">Urus pesakit anda dan permintaan akses</string>
+
+    <!-- App Settings -->
+    <string name="notifications">Pemberitahuan</string>
+    <string name="receive_alerts">Terima amaran untuk aktiviti pesakit</string>
+    <string name="dark_mode">Mod Gelap</string>
+    <string name="language">Bahasa</string>
+    <string name="select_language">Pilih Bahasa</string>
+    <string name="changing_language">Menukar bahasa ke: %1$s - Aplikasi akan dimulakan semula</string>
+    <string name="applying_language">Menggunakan %1$s…</string>
+    <string name="applying_dark_mode">Beralih ke mod gelap</string>
+    <string name="applying_light_mode">Beralih ke mod terang</string>
+    <string name="location_sharing">Perkongsian Lokasi</string>
+    <string name="allow_location_sharing">Benarkan penjaga melihat lokasi anda</string>
+    <string name="fall_detection">Pengesanan Jatuh</string>
+    <string name="fall_detection_description">Secara automatik memberitahu penjaga jika jatuh dikesan</string>
+    <string name="alert_settings">Tetapan Amaran</string>
+    <string name="configure_alerts">Konfigurasi bila anda menerima amaran</string>
+
+    <!-- Support & About -->
+    <string name="help_support">Bantuan &amp; Sokongan</string>
+    <string name="get_help">Dapatkan bantuan menggunakan aplikasi</string>
+    <string name="about">Tentang</string>
+    <string name="app_version">Versi aplikasi %1$s</string>
+    <string name="data_usage">Penggunaan Data</string>
+    <string name="used_data">Digunakan %1$s bulan ini</string>
+    
+    <!-- Home Screen -->
+    <string name="welcome_home">Selamat Datang</string>
+    <string name="your_status">Status Anda</string>
+    <string name="medication">Ubat</string>
+    <string name="heart_rate">Kadar Jantung</string>
+    <string name="steps">Langkah</string>
+    <string name="sleep">Tidur</string>
+    <string name="test_fall_detection">Uji Pengesanan Jatuh</string>
+    <string name="patients_overview">Gambaran Keseluruhan Pesakit</string>
+    <string name="alerts">Amaran</string>
+    <string name="health_reports">Laporan Kesihatan</string>
+    <string name="total">Jumlah</string>
+    <string name="online">Dalam Talian</string>
+    
+    <!-- Bluetooth Connection -->
+    <string name="connected_to_guardiancare">Disambungkan ke PenjagaWarga</string>
+    <string name="scanning_for_guardiancare">Mengimbas untuk PenjagaWarga...</string>
+    <string name="connect_to_guardiancare">Sambung ke PenjagaWarga</string>
+    <string name="tap_to_configure_wifi">Ketik untuk mengkonfigurasi WiFi</string>
+    <string name="tap_to_stop_scanning">Ketik untuk berhenti mengimbas</string>
+    <string name="tap_to_start_scanning">Ketik untuk mula mengimbas</string>
+    <string name="device_connected_successfully">✅ Peranti PenjagaWarga berjaya disambungkan</string>
+    <string name="ensure_device_powered_on">Pastikan peranti PenjagaWarga anda dihidupkan dan berdekatan</string>
+    <string name="scanning_stopped">Pengimbasan dihentikan</string>
+    
+    <!-- WiFi Configuration -->
+    <string name="configure_wifi_connection">Konfigurasikan Sambungan WiFi</string>
+    <string name="wifi_name_ssid">Nama WiFi (SSID)</string>
+    <string name="wifi_password">Kata Laluan WiFi</string>
+    <string name="your_account_email_will_be_used">E-mel akaun anda akan digunakan untuk pengenalan peranti</string>
+    <string name="connect">Sambung</string>
+    <string name="wifi_config_sent_successfully">Konfigurasi WiFi berjaya dihantar</string>
+    <string name="failed_to_send_wifi_config">Gagal menghantar konfigurasi WiFi</string>
+    <string name="could_not_retrieve_email">Tidak dapat mengambil e-mel pengguna. Sila cuba lagi.</string>
+    <string name="remove_device">Buang Peranti</string>
+    <string name="device_removed_successfully">Peranti berjaya dibuang</string>
+    <string name="failed_to_remove_device">Gagal membuang peranti</string>
+    
+    <!-- Permissions -->
+    <string name="bluetooth_permissions_required">Kebenaran Bluetooth Diperlukan</string>
+    <string name="bluetooth_permissions_explanation">Kebenaran Bluetooth dan lokasi diperlukan untuk menyambung ke peranti PenjagaWarga. Sila berikan kebenaran ini dalam tetapan aplikasi.</string>
+    <string name="open_settings">Buka Tetapan</string>
+    
+    <!-- Profile Screen -->
+    <string name="profile_updated_successfully">Profil berjaya dikemaskini</string>
+    <string name="profile_picture">Gambar Profil</string>
+    <string name="account_information">Maklumat Akaun</string>
+    <string name="created_at">Dicipta Pada</string>
+    <string name="last_updated">Terakhir Dikemaskini</string>
+    <string name="edit_profile">Edit Profil</string>
+    <string name="test_fcm_notification">Uji Pemberitahuan FCM</string>
+    <string name="fcm_notification_help">Gunakan butang ini untuk menguji jika pemberitahuan FCM berfungsi dengan baik</string>
+    <string name="email">E-mel</string>
+    <string name="date_of_birth">Tarikh Lahir</string>
+    <string name="date_of_birth_format">Tarikh Lahir (MM/DD/YYYY)</string>
+    <string name="user_id">ID Pengguna</string>
+    <string name="caretaker_id">ID Penjaga</string>
+    <string name="medical_history">Sejarah Perubatan</string>
+    <string name="condition">Keadaan</string>
+    <string name="add_condition">Tambah keadaan</string>
+    <string name="remove">Buang</string>
+    <string name="medical_conditions">Keadaan Perubatan</string>
+    <string name="name">Nama</string>
+    
+    <!-- Check-In Screen -->
+    <string name="daily_check_in">Daftar Masuk Harian</string>
+    <string name="how_are_you_feeling_today">Bagaimana perasaan anda hari ini?</string>
+    <string name="rate_your_wellbeing">Nilai kesejahteraan keseluruhan anda:</string>
+    <string name="additional_notes">Nota tambahan (pilihan):</string>
+    <string name="notes_placeholder">Masukkan sebarang kebimbangan atau nota di sini...</string>
+    <string name="submit_check_in">Hantar Daftar Masuk</string>
+    <string name="check_in_submitted">Daftar Masuk Dihantar!</string>
+    <string name="check_in_success_message">Terima kasih atas kemaskini harian anda. Penjaga anda telah dimaklumkan.</string>
+    <string name="new_check_in">Daftar Masuk Baru</string>
+    <string name="poor">Teruk</string>
+    <string name="excellent">Terbaik</string>
+    <string name="great">Sangat Baik</string>
+    <string name="good">Baik</string>
+    <string name="okay">Okey</string>
+    <string name="not_well">Tidak Baik</string>
+    
+    <!-- Fall Detection Screen -->
+    <string name="checking_bluetooth_connection">Memeriksa Sambungan Bluetooth...</string>
+    <string name="connected_to_m5stickc">Disambungkan ke M5StickC-Plus</string>
+    <string name="scanning_for_bluetooth_device">Mengimbas untuk Peranti Bluetooth...</string>
+    <string name="disconnected_from_m5stickc">Terputus dari M5StickC-Plus</string>
+    <string name="restart_bluetooth_scan">Mulakan Semula Imbasan Bluetooth</string>
+    
+    <!-- Elderly Management Screen -->
+    <string name="elderly_management">Pengurusan Warga Emas</string>
+    <string name="search_patients">Cari pesakit...</string>
+    <string name="your_patients">Pesakit Anda</string>
+    <string name="no_patients_found">Tiada pesakit dijumpai</string>
+    <string name="add_new_patient">Tambah Pesakit Baru</string>
+
+    <!-- Login Screen -->
+    <string name="login">Log Masuk</string>
+    <string name="app_logo">Logo Aplikasi</string>
+    <string name="server_settings">Tetapan Pelayan</string>
+    <string name="sign_in_to_account">Log masuk ke akaun anda</string>
+    <string name="email_icon">Ikon E-mel</string>
+    <string name="password">Kata Laluan</string>
+    <string name="password_icon">Ikon Kata Laluan</string>
+    <string name="hide_password">Sembunyi Kata Laluan</string>
+    <string name="show_password">Tunjuk Kata Laluan</string>
+    <string name="all_fields_required">Semua medan diperlukan</string>
+    <string name="or_sign_in_with">Atau log masuk dengan</string>
+    <string name="google">Google</string>
+    <string name="facebook">Facebook</string>
+    <string name="apple">Apple</string>
+    <string name="dont_have_account">Tiada akaun? </string>
+    <string name="register">Daftar</string>
+    <string name="server">Pelayan: %1$s</string>
+    <string name="server_url">URL Pelayan</string>
+    <string name="enter_ngrok_url">Masukkan URL ngrok untuk pelayan backend anda:</string>
+    <string name="server_url_example">Contoh: https://a1b2c3d4e5f6.ngrok.io</string>
+    <string name="server_url_note">Nota: Pastikan untuk menyertakan protokol (http:// atau https://) dan garis miring di akhir</string>
+    <string name="server_url_updated">URL pelayan dikemas kini kepada: %1$s</string>
+    <string name="login_with">Log masuk %1$s</string>
+    
+    <!-- Chatbot Screen -->
+    <string name="chatbot">Bot Sembang</string>
+    
+    <!-- Help Screen -->
+    <string name="user_guide">Panduan Pengguna</string>
+    <string name="emergency_contacts">Kenalan Kecemasan</string>
+    <string name="support">Sokongan</string>
+    <string name="help_and_support">Bantuan &amp; Sokongan</string>
+    <!-- Caretaker Guide -->
+    <string name="caretaker_guide_title_1">Menyediakan Profil Pesakit</string>
+    <string name="caretaker_guide_desc_1">Pelajari cara menambah dan menguruskan profil pesakit, mengemaskini maklumat perubatan, dan menetapkan kenalan kecemasan.</string>
+    <string name="caretaker_guide_title_2">Amaran Pengesanan Jatuh</string>
+    <string name="caretaker_guide_desc_2">Fahami bagaimana sistem pengesanan jatuh berfungsi dan bagaimana untuk bertindak balas terhadap amaran dengan cepat.</string>
+    <string name="caretaker_guide_title_3">Pemantauan Kesihatan</string>
+    <string name="caretaker_guide_desc_3">Jejak tanda-tanda penting pesakit, kepatuhan ubat, dan daftar masuk harian.</string>
+    <!-- Elderly Guide -->
+    <string name="elderly_guide_title_1">Daftar Masuk Harian</string>
+    <string name="elderly_guide_desc_1">Pelajari cara melengkapkan daftar masuk harian anda untuk memastikan penjaga anda dikemas kini tentang kesejahteraan anda.</string>
+    <string name="elderly_guide_title_2">Menyediakan Pengesanan Jatuh</string>
+    <string name="elderly_guide_desc_2">Konfigurasikan peranti anda untuk pengesanan jatuh automatik dan amaran kecemasan.</string>
+    <string name="elderly_guide_title_3">Peringatan Ubat</string>
+    <string name="elderly_guide_desc_3">Sediakan dan uruskan peringatan ubat untuk kekal dalam jadual kesihatan anda.</string>
+    <!-- Emergency Contacts -->
+    <string name="emergency_contact_police">Pasukan Polis Singapura</string>
+    <string name="emergency_number_police">999</string>
+    <string name="emergency_service_police">Polis, Keselamatan</string>
+    <string name="emergency_contact_ambulance">Pasukan Pertahanan Awam Singapura</string>
+    <string name="emergency_number_ambulance">995</string>
+    <string name="emergency_service_ambulance">Ambulans, Perubatan</string>
+    <string name="emergency_contact_intro">Dalam kes kecemasan, sila hubungi:</string>
+    <string name="emergency_call">Panggilan Kecemasan</string>
+    <!-- Support -->
+    <string name="need_help">Perlu Bantuan?</string>
+    <string name="support_description">Kami di sini untuk membantu anda dengan sebarang isu atau soalan yang mungkin anda ada.</string>
+    <string name="contact_support">Hubungi Sokongan</string>
+    <string name="contact_support_description">E-mel atau hubungi pasukan sokongan kami</string>
+    
+    <!-- Fall Notification Screen -->
+    <string name="no_fall_notifications">Tiada pemberitahuan jatuh</string>
+    <string name="check_for_notifications">Gunakan butang muat semula untuk memeriksa pemberitahuan baru</string>
+    <string name="refresh">Muat Semula</string>
+    
+    <!-- Caretaker Screen -->
+    <string name="caretaker">Penjaga</string>
+</resources>

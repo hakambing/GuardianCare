@@ -1,0 +1,160 @@
+services:
+  envoy:
+    env_file: ".env"
+    image: envoyproxy/envoy:v1.27.0
+    ports:
+      - "${API_GATEWAY_PORT:-8000}:8000"
+    volumes:
+      - ./envoy.yaml:/etc/envoy/envoy.yaml:ro
+    environment:
+      - JWT_SECRET=${JWT_SECRET}
+      - API_GATEWAY_PORT=${API_GATEWAY_PORT}
+      - AUTH_SERVICE_PORT=${AUTH_SERVICE_PORT}
+      - ELDERLY_SERVICE_PORT=${ELDERLY_SERVICE_PORT}
+      - NOTIFICATION_SERVICE_PORT=${NOTIFICATION_SERVICE_PORT}
+      - CHECK_IN_SERVICE_PORT=${CHECK_IN_SERVICE_PORT}
+      - ASR_SERVICE_PORT=${ASR_SERVICE_PORT}
+      - LLM_SERVICE_PORT=${LLM_SERVICE_PORT}
+    command:
+      - envoy
+      - -c
+      - /etc/envoy/envoy.yaml
+      - --service-cluster
+      - envoy-proxy
+      - --service-node
+      - envoy-proxy
+      - -l
+      - debug
+    depends_on:
+      - auth-service
+      - elderly-service
+      - notification-service
+      - asr-service
+      - check-in-service
+      - llm-service
+
+  auth-service:
+    env_file: ".env"
+    build: 
+      context: ../auth-service
+      dockerfile: Dockerfile
+    ports:
+      - "${AUTH_SERVICE_PORT}:${AUTH_SERVICE_PORT}"
+    environment:
+      - NODE_ENV=development
+      - DEFAULT_TIMEZONE=${DEFAULT_TIMEZONE}
+      - PORT=${AUTH_SERVICE_PORT}
+      - MONGODB_URI=${MONGODB_URI}
+      - JWT_SECRET=${JWT_SECRET}
+      - JWT_EXPIRES_IN=${JWT_EXPIRES_IN}
+      - NOTIFICATION_SERVICE_URL=${NOTIFICATION_SERVICE_BASE_URL}:${NOTIFICATION_SERVICE_PORT}
+      - CHECK_IN_SERVICE_URL=${CHECK_IN_SERVICE_BASE_URL}:${CHECK_IN_SERVICE_PORT}
+    depends_on:
+      - mongodb
+
+  elderly-service:
+    env_file: ".env"
+    build:
+      context: ../elderly-management-service
+      dockerfile: Dockerfile
+    ports:
+      - "${ELDERLY_SERVICE_PORT}:${ELDERLY_SERVICE_PORT}"
+    environment:
+      - NODE_ENV=development
+      - DEFAULT_TIMEZONE=${DEFAULT_TIMEZONE}
+      - PORT=${ELDERLY_SERVICE_PORT}
+      - AUTH_SERVICE_URL=${AUTH_SERVICE_BASE_URL}:${AUTH_SERVICE_PORT}
+      - NOTIFICATION_SERVICE_URL=${NOTIFICATION_SERVICE_BASE_URL}:${NOTIFICATION_SERVICE_PORT}
+      - CHECK_IN_SERVICE_URL=${CHECK_IN_SERVICE_BASE_URL}:${CHECK_IN_SERVICE_PORT}
+      - JWT_SECRET=${JWT_SECRET}
+    depends_on:
+      - auth-service
+
+  notification-service:
+    env_file: ".env"
+    build:
+      context: ../notification-service
+      dockerfile: Dockerfile
+    ports:
+      - "${NOTIFICATION_SERVICE_PORT}:${NOTIFICATION_SERVICE_PORT}"
+    environment:
+      - NODE_ENV=development
+      - PORT=${NOTIFICATION_SERVICE_PORT}
+      - MONGODB_URI=${MONGODB_URI}
+      - DEFAULT_TIMEZONE=${DEFAULT_TIMEZONE}
+      - MQTT_BROKER_URL=mqtt://test.mosquitto.org:1883
+      - MQTT_USERNAME=
+      - MQTT_PASSWORD=
+      - FIREBASE_PROJECT_ID=${FIREBASE_PROJECT_ID}
+      - FIREBASE_CLIENT_EMAIL=${FIREBASE_CLIENT_EMAIL}
+      - FIREBASE_PRIVATE_KEY=${FIREBASE_PRIVATE_KEY}
+      - AUTH_SERVICE_URL=${AUTH_SERVICE_BASE_URL}:${AUTH_SERVICE_PORT}
+      - ELDERLY_SERVICE_URL=${ELDERLY_SERVICE_BASE_URL}:${ELDERLY_SERVICE_PORT}
+      - CHECK_IN_SERVICE_URL=${CHECK_IN_SERVICE_BASE_URL}:${CHECK_IN_SERVICE_PORT}
+      - JWT_SECRET=${JWT_SECRET}
+      - FCM_TEST_TOKEN=${FCM_TEST_TOKEN}
+    depends_on:
+      - mongodb
+
+  asr-service:
+    env_file: ".env"
+    build:
+      context: ../asr-service
+      dockerfile: Dockerfile
+    ports:
+      - "${ASR_SERVICE_PORT}:${ASR_SERVICE_PORT}"
+    volumes:
+      - ${LOCAL_ASR_MODEL_PATH}:/root/.cache/ # Cache the model
+    environment:
+      - FLASK_ENV=production
+      - JWT_SECRET=${JWT_SECRET}
+      - PORT=${ASR_SERVICE_PORT}
+      - PYTHONUNBUFFERED=1
+
+  llm-service:
+    env_file: ".env"
+    build:
+      context: ../llm-service
+      dockerfile: Dockerfile
+    ports:
+      - "${LLM_SERVICE_PORT}:${LLM_SERVICE_PORT}"
+    volumes:
+      - ${LOCAL_LLM_MODEL_PATH}:/models
+    environment:
+      - JWT_SECRET=${JWT_SECRET}
+      - LLAMA_ARG_HOST=0.0.0.0
+      - MODEL_PATH=${LLM_MODEL_PATH}
+    command: "-m ${LLM_MODEL_PATH} -c ${CONTEXT_SIZE} --port ${LLM_SERVICE_PORT}"
+
+  check-in-service:
+    env_file: ".env"
+    build:
+      context: ../check-in-service
+      dockerfile: Dockerfile
+    ports:
+      - "${CHECK_IN_SERVICE_PORT}:${CHECK_IN_SERVICE_PORT}"
+    environment:
+      - DEFAULT_TIMEZONE=${DEFAULT_TIMEZONE}
+      - CHECK_IN_SERVICE_PORT=${CHECK_IN_SERVICE_PORT}
+      - AUTH_SERVICE_URL=${AUTH_SERVICE_BASE_URL}:${AUTH_SERVICE_PORT}
+      - ELDERLY_SERVICE_URL=${ELDERLY_SERVICE_BASE_URL}:${ELDERLY_SERVICE_PORT}
+      - NOTIFICATION_SERVICE_URL=${NOTIFICATION_SERVICE_BASE_URL}:${NOTIFICATION_SERVICE_PORT}
+      - CHECK_IN_SERVICE_URL=${CHECK_IN_SERVICE_BASE_URL}:${CHECK_IN_SERVICE_PORT}
+      - ASR_SERVICE_URL=${ASR_SERVICE_BASE_URL}:${ASR_SERVICE_PORT}
+      - LLM_SERVICE_URL=${LLM_SERVICE_BASE_URL}:${LLM_SERVICE_PORT}
+      - JWT_SECRET=${JWT_SECRET}
+      - LLM_CONTEXT_SIZE=${CONTEXT_SIZE}
+      - PYTHONUNBUFFERED=1
+    depends_on:
+      - asr-service
+      - llm-service
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+
+volumes:
+  mongodb_data:

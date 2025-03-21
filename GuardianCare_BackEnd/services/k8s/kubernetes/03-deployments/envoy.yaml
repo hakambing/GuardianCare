@@ -1,0 +1,103 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: envoy
+  namespace: guardiancare
+  labels:
+    app: envoy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: envoy
+  template:
+    metadata:
+      labels:
+        app: envoy
+    spec:
+      containers:
+      - name: envoy
+        image: envoyproxy/envoy:v1.27.0
+        ports:
+        - containerPort: 8000
+          name: http
+        - containerPort: 9901
+          name: admin
+        resources:
+          requests:
+            cpu: "200m"
+            memory: "256Mi"
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
+        volumeMounts:
+        - name: envoy-config
+          mountPath: /etc/envoy/envoy.yaml
+          subPath: envoy.yaml
+        env:
+        - name: JWT_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: guardiancare-secrets
+              key: JWT_SECRET
+        - name: API_GATEWAY_PORT
+          valueFrom:
+            configMapKeyRef:
+              name: guardiancare-config
+              key: API_GATEWAY_PORT
+        - name: AUTH_SERVICE_PORT
+          valueFrom:
+            configMapKeyRef:
+              name: guardiancare-config
+              key: AUTH_SERVICE_PORT
+        - name: ELDERLY_SERVICE_PORT
+          valueFrom:
+            configMapKeyRef:
+              name: guardiancare-config
+              key: ELDERLY_SERVICE_PORT
+        - name: NOTIFICATION_SERVICE_PORT
+          valueFrom:
+            configMapKeyRef:
+              name: guardiancare-config
+              key: NOTIFICATION_SERVICE_PORT
+        - name: CHECK_IN_SERVICE_PORT
+          valueFrom:
+            configMapKeyRef:
+              name: guardiancare-config
+              key: CHECK_IN_SERVICE_PORT
+        - name: ASR_SERVICE_PORT
+          valueFrom:
+            configMapKeyRef:
+              name: guardiancare-config
+              key: ASR_SERVICE_PORT
+        - name: LLM_SERVICE_PORT
+          valueFrom:
+            configMapKeyRef:
+              name: guardiancare-config
+              key: LLM_SERVICE_PORT
+        command:
+        - envoy
+        - -c
+        - /etc/envoy/envoy.yaml
+        - --service-cluster
+        - envoy-proxy
+        - --service-node
+        - envoy-proxy
+        - -l
+        - debug
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 15
+          periodSeconds: 20
+      volumes:
+      - name: envoy-config
+        configMap:
+          name: envoy-config

@@ -1,0 +1,61 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: check-in-service
+  namespace: guardiancare
+  labels:
+    app: check-in-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: check-in-service
+  template:
+    metadata:
+      labels:
+        app: check-in-service
+    spec:
+      containers:
+      - name: check-in-service
+        image: check-in-service:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 6000
+          name: http
+        resources:
+          requests:
+            cpu: "200m"
+            memory: "256Mi"
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
+        env:
+        - name: PORT
+          valueFrom:
+            configMapKeyRef:
+              name: guardiancare-config
+              key: CHECK_IN_SERVICE_PORT
+        - name: ASR_SERVICE_URL
+          valueFrom:
+            configMapKeyRef:
+              name: guardiancare-config
+              key: ASR_SERVICE_URL
+        - name: LLM_SERVICE_URL
+          valueFrom:
+            configMapKeyRef:
+              name: guardiancare-config
+              key: LLM_SERVICE_URL
+        - name: JWT_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: guardiancare-secrets
+              key: JWT_SECRET
+        - name: LLM_CONTEXT_SIZE
+          valueFrom:
+            configMapKeyRef:
+              name: guardiancare-config
+              key: CONTEXT_SIZE
+        - name: PYTHONUNBUFFERED
+          value: "1"
+        # Readiness and liveness probes removed as health endpoint doesn't exist
+        # To add them back, implement a health endpoint at /health

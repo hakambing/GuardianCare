@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: auth-service
+  namespace: guardiancare
+  labels:
+    app: auth-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: auth-service
+  template:
+    metadata:
+      labels:
+        app: auth-service
+    spec:
+      containers:
+      - name: auth-service
+        image: auth-service:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 3000
+          name: http
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "300m"
+            memory: "256Mi"
+        env:
+        - name: NODE_ENV
+          value: "development"
+        - name: PORT
+          valueFrom:
+            configMapKeyRef:
+              name: guardiancare-config
+              key: AUTH_SERVICE_PORT
+        - name: MONGODB_URI
+          valueFrom:
+            secretKeyRef:
+              name: guardiancare-secrets
+              key: MONGODB_URI
+        - name: JWT_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: guardiancare-secrets
+              key: JWT_SECRET
+        - name: JWT_EXPIRES_IN
+          valueFrom:
+            configMapKeyRef:
+              name: guardiancare-config
+              key: JWT_EXPIRES_IN
+        # Readiness and liveness probes removed as health endpoint doesn't exist
+        # To add them back, implement a health endpoint at /api/auth/health

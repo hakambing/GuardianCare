@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: asr-service
+  namespace: guardiancare
+  labels:
+    app: asr-service
+spec:
+  type: ClusterIP
+  ports:
+  - port: 6001
+    targetPort: 6001
+    protocol: TCP
+    name: http
+  selector:
+    app: asr-service

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "356700749621",
+    "project_id": "guardiancare-9bb74",
+    "storage_bucket": "guardiancare-9bb74.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:356700749621:android:89a546d1ca0fd2693f567c",
+        "android_client_info": {
+          "package_name": "com.example.guardiancare"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "CONTACT OWNER FOR DETAILS"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

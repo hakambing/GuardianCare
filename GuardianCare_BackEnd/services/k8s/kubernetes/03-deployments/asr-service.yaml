@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: asr-service
+  namespace: guardiancare
+  labels:
+    app: asr-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: asr-service
+  template:
+    metadata:
+      labels:
+        app: asr-service
+    spec:
+      containers:
+      - name: asr-service
+        image: asr-service:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 6001
+          name: http
+        resources:
+          requests:
+            cpu: "500m"
+            memory: "512Mi"
+          limits:
+            cpu: "1000m"
+            memory: "1Gi"
+        env:
+        - name: FLASK_ENV
+          value: "production"
+        - name: PORT
+          valueFrom:
+            configMapKeyRef:
+              name: guardiancare-config
+              key: ASR_SERVICE_PORT
+        - name: PYTHONUNBUFFERED
+          value: "1"
+        volumeMounts:
+        - name: asr-model-volume
+          mountPath: /root/.cache/
+        # Readiness and liveness probes removed as health endpoint doesn't exist
+        # To add them back, implement a health endpoint at /health
+      volumes:
+      - name: asr-model-volume
+        emptyDir: {}
+      initContainers:
+      - name: model-downloader
+        image: busybox
+        command: ['sh', '-c', 'echo "In a production environment, this would download or copy the ASR model files to the shared volume"']
+        volumeMounts:
+        - name: asr-model-volume
+          mountPath: /models
