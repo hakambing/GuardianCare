@@ -190,17 +190,6 @@ The fall tracker can be paired with the GuardianCare mobile app for:
 - **BLE connection issues**: Make sure Bluetooth is enabled on your mobile device and you're within range.
 - **Upload fails**: Check that the correct board is selected in PlatformIO and the device is properly connected.
 
-## Contributing
-
-1. Fork the repository.
-2. Create a new feature branch.
-3. Commit your changes.
-4. Push to your fork and submit a pull request.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 ## Acknowledgments
 
 - M5Stack for the M5StickC Plus hardware

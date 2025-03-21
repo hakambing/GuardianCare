@@ -13,16 +13,6 @@ A modern Android application designed to enhance elderly care through real-time 
 ### For Caretakers
 - **Fall Notifications**: Instant alerts when falls are detected
 - **Elderly Management**: Monitor multiple elderly users under your care
-- **Health Tracking**: View health metrics, check-in history, and medical information
-- **Communication Tools**: Direct messaging with elderly users and other caretakers
-
-## Screenshots
-
-![Login Screen](Media/login_screen.png)
-![Caretaker Dashboard](Media/caretaker_dashboard.png)
-![Elderly Profile](Media/elderly_profile.png)
-![Fall Alert](Media/fall_alert.png)
-![Check-in History](Media/checkin_history.png)
 
 ## Technology Stack
 
@@ -127,27 +117,6 @@ Elderly Account:
 Caretaker Account:
 - Email: caretaker@example.com
 - Password: password123
-
-## Future Improvements
-
-- [ ] Implement dependency injection with Hilt
-- [ ] Add repository layer for better separation of concerns
-- [ ] Enhance error handling with sealed result classes
-- [ ] Implement caching strategy for offline support
-- [ ] Add comprehensive test coverage
-- [ ] Feature-based package structure for better scalability
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/my-feature`)
-3. Commit your changes (`git commit -m 'Add some feature'`)
-4. Push to the branch (`git push origin feature/my-feature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
 

@@ -10,7 +10,9 @@ The GuardianCare system consists of three main components:
 2. **GuardianCare_FrontEnd**: An Android mobile application built with Kotlin and Jetpack Compose for both elderly users and caretakers.
 3. **GuardianCare_IoT**: IoT components including M5StickC Plus devices for fall detection and voice recording, along with gateway devices.
 
-![System Architecture](Media/ArchitectureDiagram.png)
+<div align="center">
+  <img src="Media/ArchitectureDiagram.png" alt="System Architecture" width="700"/>
+</div>
 
 ## Key Features
 
@@ -22,11 +24,35 @@ The GuardianCare system consists of three main components:
 
 ## Screenshots
 
-![Caretaker Dashboard](Media/caretaker_dashboard.png)
-![Elderly Dashboard](Media/elderly_dashboard.png)
-![Check-In](Media/check_in.png)
-![Fall Detection M5Stick](Media/fall_detection.png)
-![Alert](Media/alert.png)
+<div align="center">
+  <img src="Media/caretaker_dashboard.jpg" alt="Caretaker Dashboard" width="400"/><br/>
+  <em>Caretaker Dashboard</em>
+</div>
+
+<div align="center">
+  <img src="Media/elderly_dashboard.jpg" alt="Elderly Dashboard" width="400"/><br/>
+  <em>Elderly Dashboard</em>
+</div>
+
+<div align="center">
+  <img src="Media/check_in.jpg" alt="Check-In" width="400"/><br/>
+  <em>Check-In Interface</em>
+</div>
+
+<div align="center">
+  <img src="Media/alert.jpg" alt="Alert" width="400"/><br/>
+  <em>Alert Notification</em>
+</div>
+
+<div align="center">
+  <img src="Media/m5stick.jpg" alt="Fall Detection M5Stick" width="400"/><br/>
+  <em>M5Stick UI</em>
+</div>
+
+<div align="center">
+  <img src="Media/fall_detection.jpg" alt="Fall Detection M5Stick" width="400"/><br/>
+  <em>Fall Detection on M5Stick</em>
+</div>
 
 ## Prerequisites
 
@@ -101,7 +127,7 @@ For detailed documentation on each component, please refer to the README files i
 
 ## Demo
 
-Watch a live demo here: [GuardianCare Demo](https://youtu.be/ZJ6RMjp1TDg)
+Watch a demo here: [GuardianCare Demo](https://youtu.be/ZJ6RMjp1TDg)
 
 ## Tech Stack
 
@@ -123,7 +149,3 @@ Watch a live demo here: [GuardianCare Demo](https://youtu.be/ZJ6RMjp1TDg)
 - [Christian](https://github.com/candelabyte)
 - [Nelson](https://github.com/Realez77)
 - [Danish](https://github.com/Testwiwi)
-
-<p align="left">
-  <img src="GuardianCare.png" alt="GuardianCare Logo" width="80">
-</p>
