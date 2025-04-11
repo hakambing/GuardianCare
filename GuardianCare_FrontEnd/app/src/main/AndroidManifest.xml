@@ -73,7 +73,7 @@
         <!-- Google Maps API Key -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyD5PSg_7O2jJZe8lqsV5hHrstOp0cR0oaE" />
+            android:value="CONTACT OWNER" />
 
     </application>
 
